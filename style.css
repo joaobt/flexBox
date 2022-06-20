@@ -1,0 +1,98 @@
+body,
+ul, 
+li, 
+p {
+    margin: 0;
+    padding:0px;
+    list-style: none;
+    font-size:1.2rem;
+    font-family: Arial;
+}
+body{
+   margin-bottom:100px; 
+}
+
+a {
+    text-decoration:none;
+    color:white
+}
+
+.header {
+    background-color:#1d1e20;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+}
+.menu{
+    display:flex;
+}
+.menu li {
+margin-left: 10px;
+
+}
+.menu li a{
+    display: block;
+    padding:10px;
+}
+
+/*css flexbox*/
+
+h1 {
+    text-align: center;
+    margin-top:100px;
+}
+
+img {
+    max-width: 100%;
+    display:block;
+}
+/* displey flexbox */
+
+.flex {
+    display:flex;
+    flex-wrap: wrap; 
+    max-width: 800px;
+    margin:0 auto;
+}
+.flex > div {
+     flex: 1 1 200px;
+     margin:10px;
+}
+/*css Grid 1*/
+
+.Grid1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px;
+    padding:10px;
+    margin:0 auto;
+    grid-gap:20px;
+}
+.Grid1 > div:nth-child(n +4){
+   background:0;/*obs: colocar um tode cinza bem claro mais tarde*/
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-gap:10px;
+   align-items: center;
+}
+.Grid1 > div.anuncio {
+    grid-column: 1;
+    grid-row: 2 / 5;
+    border-top:  10px solid tan;
+    display: block;
+}
+    @media(max-width:600px) {
+       .grid1 {
+        grid-template-columns:repeat(2, 1fr)
+       }
+       .Grid1 > div:nth-child(n +4) {
+        display:block;
+       }
+       .Grid1 > div.anuncio {
+        grid-template-columns: auto;
+        grid-row: auto;
+        order: -1;
+       }
+    }
