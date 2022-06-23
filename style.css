@@ -7,6 +7,7 @@ p {
     list-style: none;
     font-size:1.2rem;
     font-family: Arial;
+    
 }
 body{
    margin-bottom:100px; 
@@ -14,19 +15,27 @@ body{
 
 a {
     text-decoration:none;
-    color:white
+    color:#100f0f
+}
+.body {
+    background-color: rgb(225, 206, 242);
 }
 
 .header {
-    background-color:#1d1e20;
+    background-color:rgb(192, 182, 202);
     display: flex;
     flex-wrap:wrap;
     justify-content:space-between;
     align-items:center;
-    padding:20px;
+    padding:30px;
+    border-radius: 20px;
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-top: 2px;
 }
 .menu{
     display:flex;
+    
 }
 .menu li {
 margin-left: 10px;
@@ -37,16 +46,22 @@ margin-left: 10px;
     padding:10px;
 }
 
+
 /*css flexbox*/
 
 h1 {
     text-align: center;
     margin-top:100px;
+    border-radius: 10px;
+    background-color:rgb(213, 203, 223);
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 img {
     max-width: 100%;
     display:block;
+    border-radius: 10px;
 }
 /* displey flexbox */
 
@@ -59,6 +74,8 @@ img {
 .flex > div {
      flex: 1 1 200px;
      margin:10px;
+     
+   ;
 }
 /*css Grid 1*/
 
@@ -69,18 +86,18 @@ img {
     padding:10px;
     margin:0 auto;
     grid-gap:20px;
+    
 }
-.Grid1 > div:nth-child(n +4){
+.Grid1 > div:nth-child(n + 4){
    background:0;/*obs: colocar um tode cinza bem claro mais tarde*/
    display: grid;
-   grid-template-columns: 1fr 1fr;
+   grid-template-columns: 1fr 1fr ;
    grid-gap:10px;
    align-items: center;
 }
 .Grid1 > div.anuncio {
     grid-column: 1;
     grid-row: 2 / 5;
-    border-top:  10px solid tan;
     display: block;
 }
     @media(max-width:600px) {
@@ -96,3 +113,4 @@ img {
         order: -1;
        }
     }
+    
